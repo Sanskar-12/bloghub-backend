@@ -28,6 +28,9 @@ app.use(
 
 connectDB();
 
+app.get("/",(req,res)=>{
+  res.send("Hello")
+})
 app.use("/api/user", userRoute);
 app.use("/api/auth", authRoute);
 app.use("/api/post", postRoute);
